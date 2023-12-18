@@ -8,6 +8,9 @@ import Types2 from './pages/mentors';
 import Types3 from './pages/review';
 import Footer from './pages/footer';
 import Copyright  from './signuppage.js/signup';
+import ResponsiveAppBar1 from './coursepages/header1';
+import Types9 from './coursepages/corseintro';
+import NestedList from './coursepages/courselist';
 function App() {
   const appStyle = {
     backgroundColor: '#FFEBEB', // Replace with your desired color code
@@ -18,14 +21,19 @@ function App() {
     <>
      <div style={appStyle}>
     
-    <ResponsiveAppBar/> 
+    {/* <ResponsiveAppBar/> 
     <Types/>
     <BasicSelect/>
     <Types1/>
     <MediaCard/>
     <Types2/>
     <Types3/>
-    <Footer/>
+    <Footer/> */}
+
+<ResponsiveAppBar1/>
+<Types9/>
+<NestedList/>
+
      {/* <Copyright/>  */}
      </div>
      {/* <Copyright/> */}
