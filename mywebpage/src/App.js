@@ -1,42 +1,57 @@
 import React from 'react';
-import ResponsiveAppBar from './pages/header';
-import Types from './pages/body';
-import BasicSelect from './pages/hours';
-import Types1 from './pages/coursetitle';
-import MediaCard from './pages/card';
-import Types2 from './pages/mentors';
-import Types3 from './pages/review';
-import Footer from './pages/footer';
-import Copyright  from './signuppage.js/signup';
-import ResponsiveAppBar1 from './coursepages/header1';
-import NestedList from './coursepages/courselist';
-import Types9 from './coursepages/corseintro';
+import {Route, Routes} from "react-router-dom";
+import Homepage from './frontpage';
+import Loginpage from './Login';
+import Signuppage from './SignUp';
+import Types11 from './secondpage';
+import LoginComponent from './loginas';
+import AdminLogin from './adminlogin.js';
+import TeacherLogin from './teacherlogin.js';
+import StudentLogin from './studentlogin.js';
 function App() {
   const appStyle = {
-    backgroundColor: '#FFEBEB', // Replace with your desired color code
-    minHeight: '100vh', // Ensures the background color covers the entire viewport height
+    backgroundColor: '#FFEBEB',
+    minHeight: '100vh', 
   };
-
   return (
     <>
-     <div style={appStyle}>
-    
-    {/* <ResponsiveAppBar/> 
-    <Types/>
-    <BasicSelect/>
-    <Types1/>
-    <MediaCard/>
-    <Types2/>
-  <Types3/>*/}
-    {/* <Footer/>  */}
-    <ResponsiveAppBar1/>
-    <Types9/>
-    <NestedList/>
-     {/* <Copyright/>  */}
-     </div>
-     {/* <Copyright/> */}
+    <div style={appStyle}>
+
+  <Routes>
+  <Route path="/" element={<Homepage/>}/> 
+  <Route path="/loginpage" element={<LoginComponent/>}/> 
+  <Route path="/adminlogin" element={<AdminLogin/>}/> 
+  <Route path="/teacherlogin" element={<TeacherLogin/>}/> 
+  <Route path="/studentlogin" element={<StudentLogin/>}/> 
+
+
+</Routes>
+</div>
     </>
   );
   }
 
 export default App;
+
+
+
+
+
+    {/* <div style={appStyle}>
+    
+    <ResponsiveAppBar/> 
+    <Types/>
+    <BasicSelect/> 
+    <Types1/>
+    <MediaCard/>
+    <Types2/>
+    <Types3/>
+    <Footer/> */}
+    {/* <Copyright/>   */}
+{/* <Copyright/>    */}
+{/* <ResponsiveAppBar1/>
+<Types9/>
+<NestedList/> */}
+{/* <kavin/> */}
+
+     {/* </div> */}
