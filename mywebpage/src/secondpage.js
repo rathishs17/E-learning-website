@@ -59,7 +59,7 @@ function NestedList() {
       <Collapse in={openHtml} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
 
-        <Link to={"syllabs"}>
+        <Link to={"con"}>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
@@ -172,16 +172,18 @@ function Homepage1() {
             <b>MR Tech</b>
           </Typography>
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Home
+            
           </Button>
             {/* <Link to="/loginpage"> */}
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              Login
+              
           </Button>
             {/* </Link> */}
+            <Link to="/">
           <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Register
+            lOGOUT
           </Button>
+          </Link> 
           {/* Add other navigation buttons as needed */}
         </Toolbar>
       </AppBar>
@@ -262,6 +264,12 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
   <Grid marginTop="16%" marginLeft="27%">
   <Typography>preview this course</Typography>
 </Grid>
+<Grid marginTop="16%" marginLeft="">
+  <Typography><h1><b>$499</b></h1></Typography>
+</Grid>
+<Link to={"/payment"}>
+<Button variant='contained' color='error'>Buy now</Button>
+</Link>
 </Grid>
 </Grid>
 </Container>
@@ -302,7 +310,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
           </Typography>
           <Typography marginTop="5%">
 <p>Welcome to the 100 Days of Code - The Complete Web Development Pro Bootcamp,<b>the only course you need</b>  to learn to code with Python. With over 500,000<b>5 STAR reviews</b>  and a 4.8 average, my courses are some of the HIGHEST RATED courses in the history! 
- <br/> <br/><b>100 days, 1 hour per day, learn to build 1 project per day, this is how you master Python.
+ <br/> <br/><b>100 days, 1 hour per day, learn to build 1 project per day, this is how you master Web Development.
 
 </b> </p>
 
@@ -388,8 +396,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
             </Typography>
           </Box>
         </Container>
-      </Box> 
-
+      </Box>
     </>
   );
 }

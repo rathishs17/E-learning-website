@@ -4,10 +4,8 @@ import Homepage from './frontpage';
 import Loginpage from './Login';
 import Signuppage from './SignUp';
 import Types11 from './secondpage';
-import LoginComponent from './loginas';
-import AdminLogin from './adminlogin.js';
-import TeacherLogin from './teacherlogin.js';
-import StudentLogin from './studentlogin.js';
+import Checkout from './payment';
+import Homepage1 from './afterpayment';
 function App() {
   const appStyle = {
     backgroundColor: '#FFEBEB',
@@ -18,11 +16,14 @@ function App() {
     <div style={appStyle}>
 
   <Routes>
+  <Route path="/login" element={<Loginpage/>}/> 
   <Route path="/" element={<Homepage/>}/> 
-  <Route path="/loginpage" element={<LoginComponent/>}/> 
-  <Route path="/adminlogin" element={<AdminLogin/>}/> 
-  <Route path="/teacherlogin" element={<TeacherLogin/>}/> 
-  <Route path="/studentlogin" element={<StudentLogin/>}/> 
+  <Route path="/signuppage" element={<Signuppage/>}/> 
+  {/* <Route path="/teacherprofile" element={<TeacherProfile/>}/>  */}
+  {/* <Route path="/studentprofile" element={<StudentProfile/>}/>  */}
+  <Route path="/coursepage" element={<Types11/>}/> 
+  <Route path="/payment" element={<Checkout/>}/> 
+  <Route path="/coursecontent" element={<Homepage1/>}/> 
 
 
 </Routes>

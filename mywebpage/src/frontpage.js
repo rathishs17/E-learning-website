@@ -52,7 +52,7 @@ const MentorCard = ({ name, image }) => (
 function Homepage() {
   return (
     <>
-      <AppBar position="fixed" sx={{ backgroundColor: '#FFEBEB' }}>
+      <AppBar position="fixed"  sx={{ backgroundColor: '#FFEBEB' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>MR Tech</b>
@@ -63,8 +63,8 @@ function Homepage() {
           <Link to={"/loginpage"}><Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               Login
           </Button></Link> */}
-          <Link to={"/loginpage"}> <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480' , marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Login
+          <Link to={"/login"}> <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480' , marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            GET_STARTED
           </Button></Link>
           {/* Add other navigation buttons as needed */}
         </Toolbar>
@@ -93,7 +93,7 @@ function Homepage() {
           </Box>
         </Grid>
 
-        <Grid container spacing={3} marginTop="3%" marginLeft="2%">
+        <Grid container spacing={3} marginTop="3%" marginLeft="5%">
           <Grid item xs={12} sm={4}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia sx={{ height: 140 }} image={webpic} title="green iguana" />
@@ -111,28 +111,28 @@ function Homepage() {
         </Grid>
       </Container>
 
-      <Grid container direction="column" mt={3} marginTop="5%" marginLeft="12%">
+      <Grid container direction="column" mt={3} marginTop="5%" marginLeft="15%" >
         <Typography variant="h3" gutterBottom marginTop="5%">
           <b>Mentors</b>
         </Typography>
-        <Grid container direction="row" marginRight="19%" marginTop="3%">
-          <MentorCard name="Mark " image={m1} />
-          <MentorCard name="Ana de" image={m2} />
-          <MentorCard name="John" image={m3} />
-          <MentorCard name="Rio" image={m4} />
+        <Grid container direction="row" marginRight="10%" marginLeft="2%" marginTop="3%">
+          <MentorCard name="Mark mark mark" image={m1} />
+          <MentorCard name="Ana de de de" image={m2} />
+          <MentorCard name="John john john" image={m3} />
+          <MentorCard name="Rio rio rio rio" image={m4} />
           {/* Add more MentorCard components for additional mentors */}
         </Grid>
       </Grid>
 
-      <Grid container direction="column" marginTop="3%" marginLeft="4%" bgcolor="" mt={6}>
+      <Grid container direction="column" marginTop="3%" marginLeft="6.5%" bgcolor="" mt={6}>
       <Box sx={{ width: '100%', maxWidth: 970, textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom marginTop="8%">
           <b>What our happy students say...</b>
         </Typography>
-        <Typography variant="h6" paragraph margi>
+        {/* <Typography variant="h6" paragraph marginLeft={"6%"}>
           Build skills with our courses and mentorship from world-class companies.
-        </Typography>
-        <Grid container direction="row" marginTop="7%" marginLeft="14%">
+        </Typography> */}
+        <Grid container direction="row" marginTop="7%" marginLeft="18%">
           <EmployeeReviewCard
             name="John Doe"
             position="Software Engineer"

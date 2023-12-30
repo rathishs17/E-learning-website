@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Grid, Container, Link } from '@mui/material';
+import { Grid, Container } from '@mui/material';
 import { Facebook, Instagram, Twitter } from '@mui/icons-material';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
@@ -15,6 +15,13 @@ import Collapse from '@mui/material/Collapse';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
+import Card from '@mui/joy/Card';
+import CardCover from '@mui/joy/CardCover';
+import CardContent from '@mui/joy/CardContent';
+import { Link } from 'react-router-dom';
+import v from './images/video.mp4'
 
 function NestedList() {
   const [openHtml, setOpenHtml] = React.useState(true);
@@ -34,8 +41,9 @@ function NestedList() {
   };
 
   return (
+
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop: '8%', marginLeft: '0%' }}
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop: '6%', marginLeft: '0%' }}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
@@ -50,12 +58,16 @@ function NestedList() {
       </ListItemButton>
       <Collapse in={openHtml} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
+
+        <Link to={"con"}>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
             </ListItemIcon>
             <ListItemText primary="1. HTML Introduction" />
           </ListItemButton>
+          </Link>
+          
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
@@ -153,27 +165,132 @@ function NestedList() {
 function Homepage1() {
   return (
     <>
+
       <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>MR Tech</b>
           </Typography>
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Home
+            
           </Button>
-            <Link to="/loginpage">
+            {/* <Link to="/loginpage"> */}
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              Login
+              
           </Button>
-            </Link>
+            {/* </Link> */}
+            <Link to="/loginpage">
           <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Register
+            lOGOUT
           </Button>
+          </Link> 
           {/* Add other navigation buttons as needed */}
         </Toolbar>
       </AppBar>
 
-      
+
+      <Grid container direction="column" marginTop="4.5%" marginLeft="11%" font fontStyle="" bgcolor="">
+        <Box sx={{ width: '200%', maxWidth: 750 }}>
+          <Typography variant="h4" gutterBottom>
+            Web Development
+          </Typography>
+        </Box>
+      </Grid>
+      <Container maxWidth="lg" marginTop="4%">
+        <NestedList />
+      </Container>
+      <Grid container direction="column" marginTop="5.5%" marginLeft="11%" font fontStyle="" bgcolor="">
+        <Box sx={{ width: '200%', maxWidth: 750 }}>
+          <Typography variant="h4" gutterBottom>
+            About this course
+          </Typography>
+          <Typography marginTop="5%">
+        Become a Web Developer Expert.
+        <br/>
+        <br/>
+        <hr></hr>
+        <br/>
+<b>By the numbers</b> : Lectures : 202, video : 22 hrs
+
+        <br/>
+        <br/>
+        <hr></hr>
+        <br/>
+<b>Features</b> : Available on ios and Android.
+        <br/>
+        <br/>
+        <hr></hr>
+          </Typography>
+        </Box>
+      </Grid>
+
+      <Box
+        component="footer"
+        sx={{
+          backgroundColor: 'pink',
+          p: 6,
+          marginTop: '5%',
+        }}
+      >
+        <Container maxWidth="lg">
+          {/* Footer content */}
+          <Grid container spacing={5}>
+            {/* About Us */}
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                About Us
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                We are MR Tech company, dedicated to providing the best service to our customers.
+              </Typography>
+            </Grid>
+
+            {/* Contact Us */}
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                Contact Us
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                123 Main Street, Anytown, USA
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Email: mrtech@example.com
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Phone: +1 234 567 8901
+              </Typography>
+            </Grid>
+
+            {/* Follow Us */}
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" color="text.primary" gutterBottom>
+                Follow Us
+              </Typography>
+              <Link href="https://www.facebook.com/" color="inherit">
+                <Facebook />
+              </Link>
+              <Link href="https://www.instagram.com/" color="inherit" sx={{ pl: 1, pr: 1 }}>
+                <Instagram />
+              </Link>
+              <Link href="https://www.twitter.com/" color="inherit">
+                <Twitter />
+              </Link>
+            </Grid>
+          </Grid>
+
+          {/* Copyright */}
+          <Box mt={5}>
+            <Typography variant="body2" color="text.secondary" align="center">
+              {"Copyright © "}
+              <Link color="inherit" href="https://your-website.com/">
+                Your Website
+              </Link>{" "}
+              {new Date().getFullYear()}
+              {"."}
+            </Typography>
+          </Box>
+        </Container>
+      </Box>
     </>
   );
 }
