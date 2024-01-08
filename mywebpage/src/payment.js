@@ -17,7 +17,7 @@ import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
 import Paper from '@mui/material/Paper';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 const products = [
     {
       name: 'Product 1',
@@ -127,6 +127,8 @@ export default function Checkout() {
                 confirmation, and will send you an update when your order has
                 shipped.
               </Typography>
+              <hr/>
+              <Typography>You can access course here  <Link to="/coursecontent"><Button variant='outlined'> Course</Button></Link></Typography>
             </React.Fragment>
           ) : (
             <React.Fragment>

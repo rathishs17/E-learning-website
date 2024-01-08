@@ -6,6 +6,7 @@ import Signuppage from './SignUp';
 import Types11 from './secondpage';
 import Checkout from './payment';
 import Homepage1 from './afterpayment';
+import ResponsiveAppBar from './admin';
 function App() {
   const appStyle = {
     backgroundColor: '#FFEBEB',
@@ -22,6 +23,8 @@ function App() {
   {/* <Route path="/teacherprofile" element={<TeacherProfile/>}/>  */}
   {/* <Route path="/studentprofile" element={<StudentProfile/>}/>  */}
   <Route path="/coursepage" element={<Types11/>}/> 
+  <Route path="/admin" element={<ResponsiveAppBar/>}/> 
+
   <Route path="/payment" element={<Checkout/>}/> 
   <Route path="/coursecontent" element={<Homepage1/>}/> 
 

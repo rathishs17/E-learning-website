@@ -179,7 +179,7 @@ function Homepage1() {
               
           </Button>
             {/* </Link> */}
-            <Link to="/loginpage">
+            <Link to="/login" style={{ textDecoration: 'none' }}>
           <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             lOGOUT
           </Button>
