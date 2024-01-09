@@ -9,7 +9,6 @@ import Homepage1 from './afterpayment';
 import ResponsiveAppBar from './admin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardContainer from "./CardContainer";
-import FormProductData from "./formproductdata";
 
 function App() {
   const appStyle = {
@@ -24,7 +23,6 @@ function App() {
   <React.Fragment>
 
   <Route path="/card-container" element={<CardContainer />} />
-  <Route path="/form" element={<FormProductData />} />
 
 
   <Route path="/login" element={<Loginpage/>}/> 
