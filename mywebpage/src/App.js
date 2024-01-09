@@ -7,6 +7,10 @@ import Types11 from './secondpage';
 import Checkout from './payment';
 import Homepage1 from './afterpayment';
 import ResponsiveAppBar from './admin';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CardContainer from "./CardContainer";
+import FormProductData from "./formproductdata";
+
 function App() {
   const appStyle = {
     backgroundColor: '#FFEBEB',
@@ -17,6 +21,12 @@ function App() {
     <div style={appStyle}>
 
   <Routes>
+  <React.Fragment>
+
+  <Route path="/card-container" element={<CardContainer />} />
+  <Route path="/form" element={<FormProductData />} />
+
+
   <Route path="/login" element={<Loginpage/>}/> 
   <Route path="/" element={<Homepage/>}/> 
   <Route path="/signuppage" element={<Signuppage/>}/> 
@@ -24,10 +34,11 @@ function App() {
   {/* <Route path="/studentprofile" element={<StudentProfile/>}/>  */}
   <Route path="/coursepage" element={<Types11/>}/> 
   <Route path="/admin" element={<ResponsiveAppBar/>}/> 
-
   <Route path="/payment" element={<Checkout/>}/> 
   <Route path="/coursecontent" element={<Homepage1/>}/> 
-
+  {/* <CardContainer/>
+  <FormProductData/> */}
+  </React.Fragment>
 
 </Routes>
 </div>
