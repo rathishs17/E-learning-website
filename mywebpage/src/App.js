@@ -9,6 +9,7 @@ import Homepage1 from './afterpayment';
 import ResponsiveAppBar from './admin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardContainer from "./CardContainer";
+import FrontPage from './pics';
 
 function App() {
   const appStyle = {
@@ -27,11 +28,15 @@ function App() {
 
   <Route path="/login" element={<Loginpage/>}/> 
   <Route path="/" element={<Homepage/>}/> 
+
+  <Route path="/pic" element={<FrontPage/>}/> 
+
+
   <Route path="/signuppage" element={<Signuppage/>}/> 
   {/* <Route path="/teacherprofile" element={<TeacherProfile/>}/>  */}
   {/* <Route path="/studentprofile" element={<StudentProfile/>}/>  */}
   <Route path="/coursepage" element={<Types11/>}/> 
-  <Route path="/admin" element={<ResponsiveAppBar/>}/> 
+  {/* <Route path="/admin" element={<ResponsiveAppBar/>}/>  */}
   <Route path="/payment" element={<Checkout/>}/> 
   <Route path="/coursecontent" element={<Homepage1/>}/> 
   {/* <CardContainer/>

@@ -65,7 +65,7 @@ function Homepage() {
           <Link to={"/loginpage"}><Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               Login
           </Button></Link> */}
-          <Link to="/login" style={{ textDecoration: 'none' }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
  <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480' , marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             GET_STARTED
           </Button></Link>

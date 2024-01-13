@@ -15,6 +15,9 @@ import s1 from "./images/student1.jpg";
 import s2 from "./images/student2.jpg";
 import s3 from "./images/student3.jpg";
 
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 import { Link } from 'react-router-dom';
 
 const MentorCard = ({ name, image }) => (
@@ -50,8 +53,19 @@ const MentorCard = ({ name, image }) => (
   );
 
 function Homepage() {
+  const [product, setProduct] = useState([]);
+
+  async function fetchdata() {
+    const response = await axios.get('http://localhost:7000/');
+    setProduct(response.data);
+  }
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
   return (
     <>
+    
       <AppBar position="fixed"  sx={{ backgroundColor: '#FFEBEB' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
@@ -71,6 +85,10 @@ function Homepage() {
         </Toolbar>
       </AppBar>
 
+
+      
+
+
       <Grid container direction ="column" alignItems="center" justify="center" marginTop="4.5%" font fontStyle="" bgcolor="" >
 
     <Box sx={{ width: '200%', maxWidth: 750 }}>
@@ -84,16 +102,23 @@ function Homepage() {
     </Box>
     </Grid>
 
+
+
+
+
+
+
+    
+
       <Container maxWidth="lg" marginTop="4%">
-        <Grid container direction="column" marginLeft="1.5%" marginTop="5%">
+        <Grid container direction="column" marginLeft="2.5%" marginTop="5%">
           <Box sx={{ width: '200%', maxWidth: 750 }}>
-            <Typography variant="h3" gutterBottom marginTop="4%">
-              <b>Our Course</b>
+            <Typography variant="h3" gutterBottom marginTop="4%" marginLeft="2.5%" >
+              <b>Our Courses</b>
             </Typography>
-            <h3>Web Development</h3>
           </Box>
         </Grid>
-
+{/* 
         <Grid container spacing={3} marginTop="3%" marginLeft="5%">
           <Grid item xs={12} sm={4}>
             <Card sx={{ maxWidth: 345 }}>
@@ -108,8 +133,18 @@ function Homepage() {
               </CardContent>
             </Card>
           </Grid>
-          {/* Add more cards or content as needed */}
-        </Grid>
+        </Grid> */}
+          <div className="container d-flex flex-wrap gap-5 " marginTop="3%">
+      {product.map((v) => {
+        return (
+          <div key={v.name} className="card" >
+            <img src={v.img} alt={v.name} />
+            <p>{v.name}</p>
+          </div>
+        );
+      })}
+    </div>
+
       </Container>
 
       <Grid container direction="column" mt={3} marginTop="5%" marginLeft="15%" >
@@ -223,7 +258,9 @@ function Homepage() {
           </Box>
         </Container>
       </Box> 
-      
+
+    
+
     </>
   );
 }

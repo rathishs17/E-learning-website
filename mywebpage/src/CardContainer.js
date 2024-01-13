@@ -21,7 +21,7 @@ function AdminDashboard() {
   });
 
   async function fetchdata() {
-    const response = await axios('http://localhost:1000/');
+    const response = await axios('http://localhost:7000/');
     setProduct(response.data);
   }
 
@@ -30,7 +30,7 @@ function AdminDashboard() {
   }, []);
 
   const sumbitForm = (e) => {
-    axios.post('http://localhost:1000/newProduct', formData)
+    axios.post('http://localhost:7000/newProduct', formData)
       .then((response) => {
         console.log("Product added successfully", response);
         // Optionally, you can fetch updated data after adding a new product
@@ -48,11 +48,12 @@ function AdminDashboard() {
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>ADMIN DASHBOARD</b>
           </Typography>
-          <Link to="/login" style={{ textDecoration: 'none' }}>
-            <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              GET_STARTED
-            </Button>
-          </Link>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+  <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    HOME
+  </Button>
+</Link>
+
         </Toolbar>
       </AppBar>
 
@@ -151,6 +152,11 @@ function AdminDashboard() {
           </Box>
         </Container>
       </Box> 
+
+
+
+
+      
     </>
   );
 }
