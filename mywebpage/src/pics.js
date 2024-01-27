@@ -7,7 +7,7 @@ function FrontPage() {
   const [product, setProduct] = useState([]);
 
   async function fetchdata() {
-    const response = await axios.get('http://localhost:7000/');
+    const response = await axios.get('http://localhost:7002/');
     setProduct(response.data);
   }
 

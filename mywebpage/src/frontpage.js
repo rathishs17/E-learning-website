@@ -65,7 +65,8 @@ function Homepage() {
   }, []);
   return (
     <>
-    
+    <Grid maxWidth="78%">
+
       <AppBar position="fixed"  sx={{ backgroundColor: '#FFEBEB' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
@@ -89,7 +90,7 @@ function Homepage() {
       
 
 
-      <Grid container direction ="column" alignItems="center" justify="center" marginTop="4.5%" font fontStyle="" bgcolor="" >
+      <Grid container direction ="column" alignItems="center" justify="center" marginTop="5.5%" font fontStyle="" bgcolor="" marginLeft="15%">
 
     <Box sx={{ width: '200%', maxWidth: 750 }}>
       
@@ -147,7 +148,7 @@ function Homepage() {
 
       </Container>
 
-      <Grid container direction="column" mt={3} marginTop="5%" marginLeft="15%" >
+      <Grid container direction="column" mt={3} marginTop="5%" marginLeft="7%" >
         <Typography variant="h3" gutterBottom marginTop="5%">
           <b>Mentors</b>
         </Typography>
@@ -160,7 +161,7 @@ function Homepage() {
         </Grid>
       </Grid>
 
-      <Grid container direction="column" marginTop="3%" marginLeft="6.5%" bgcolor="" mt={6}>
+      <Grid container direction="column" marginTop="3%" marginLeft="-3.6%" bgcolor="" mt={6}>
       <Box sx={{ width: '100%', maxWidth: 970, textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom marginTop="8%">
           <b>What our happy students say...</b>
@@ -190,13 +191,16 @@ function Homepage() {
         </Grid>
       </Box>
     </Grid>
+    </Grid>
 
       <Box
         component="footer"
         sx={{
+          
           backgroundColor: 'pink',
           p: 6,
           marginTop: '5%',
+          width: '100%',
         }}
       >
         <Container maxWidth="lg">

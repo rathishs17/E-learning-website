@@ -165,8 +165,7 @@ function NestedList() {
 function Homepage1() {
   return (
     <>
-
-      <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>MR Tech</b>
@@ -187,6 +186,9 @@ function Homepage1() {
           {/* Add other navigation buttons as needed */}
         </Toolbar>
       </AppBar>
+    <Grid maxWidth="85%" marginLeft="5%">
+
+      
 
       <Grid container direction="column" marginTop="4.5%" marginLeft="4%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
@@ -329,7 +331,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
           </Typography>
         </Box>
       </Grid>
-
+      </Grid>
       <Box
         component="footer"
         sx={{
