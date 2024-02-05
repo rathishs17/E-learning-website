@@ -139,7 +139,7 @@ function Homepage() {
             </Card>
           </Grid>
         </Grid> */}
-          <div className="container d-flex flex-wrap gap-5 " marginTop="3%">
+          <div className="container d-flex flex-float gap-5 " style={{ marginRight:'51%',marginTop: '3%' ,width:'40%',height:'35%'}} >
       {product.map((v) => {
         return (
           <div key={v.name} className="card" >
