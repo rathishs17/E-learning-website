@@ -157,10 +157,10 @@ function Homepage() {
           <b>Mentors</b>
         </Typography>
         <Grid container direction="row" marginRight="10%" marginLeft="2%" marginTop="3%">
-          <MentorCard name="Mark mark mark" image={m1} />
-          <MentorCard name="Ana de de de" image={m2} />
-          <MentorCard name="John john john" image={m3} />
-          <MentorCard name="Rio rio rio rio" image={m4} />
+          <MentorCard name="Mark - web dev" image={m1} />
+          <MentorCard name="shah - UX & UI" image={m2} />
+          <MentorCard name="John - node dev" image={m3} />
+          <MentorCard name="Rio - java dev" image={m4} />
           {/* Add more MentorCard components for additional mentors */}
         </Grid>
       </Grid>

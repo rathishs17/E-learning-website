@@ -145,32 +145,68 @@ const SignIn = () => {
     }
   };
 
+  // return (
+  //   <>
+  //     <div>
+  //     </div>
+   
+  //     {user && (
+  //       <div sx={{display:"flex" ,justifyContent:"center"}}>
+
+  //       <>
+  //         <TextField
+  //           type="password"
+  //           label="Admin Password"
+  //           value={password}
+  //           onChange={(e) => setPassword(e.target.value)}
+  //         />
+  //          <TextField
+  //           type="Name"
+  //           label="Admin Name"
+  //           value={name}
+  //           onChange={(e) => setName(e.target.value)}
+  //         />
+  //         <Button variant="contained" onClick={handleButtonClick}>
+  //           Go to Admin
+  //         </Button>
+  //       </>
+  //       </div>
+
+  //     )}
+  //   </>
+  // );
   return (
     <>
-      <div>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        {user && (
+          <div style={{ border: "3px solid #ccc", padding: "50px", borderRadius:"3%" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <TextField
+                type="text"
+                label="Admin Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                style={{ marginBottom: "19px" }} // Add marginBottom for spacing
+              />
+              <TextField
+                type="password"
+                label="Admin Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                style={{ marginBottom: "34px" }} // Add marginBottom for spacing
+              />
+              
+              <Button variant="contained" onClick={handleButtonClick}>
+                Go to Admin
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
-   
-      {user && (
-        <>
-          <TextField
-            type="password"
-            label="Admin Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-           <TextField
-            type="Name"
-            label="Admin Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <Button variant="contained" onClick={handleButtonClick}>
-            Go to Admin
-          </Button>
-        </>
-      )}
     </>
   );
+  
+  
 };
 
 export default SignIn;
