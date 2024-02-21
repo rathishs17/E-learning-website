@@ -59,7 +59,7 @@ function NestedList() {
       <Collapse in={openHtml} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
 
-        <Link to={"con"}>
+        <Link to={"https://youtu.be/x9bTBcron78?si=9ISmKZdXF4TlNDyk"}>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
@@ -165,7 +165,7 @@ function NestedList() {
 function Homepage1() {
   return (
     <>
-    <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }} >
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>MR Tech</b>
@@ -228,7 +228,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
     </Typography>
     <br/>
     <Typography sx={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-  <span>🔯 Last updated on : '12.22.3333'</span>
+  <span>🔯 Last updated on : '21.2.2024'</span>
   <span style={{ marginLeft: '8px' }}>🌐 English</span>
 </Typography>
       </Grid>
@@ -391,7 +391,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
             <Typography variant="body2" color="text.secondary" align="center">
               {"Copyright © "}
               <Link color="inherit" href="https://your-website.com/">
-                Your Website
+                MR Tech
               </Link>{" "}
               {new Date().getFullYear()}
               {"."}

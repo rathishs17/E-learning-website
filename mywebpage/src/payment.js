@@ -97,11 +97,12 @@ export default function Checkout() {
         sx={{
           position: 'relative',
           borderBottom: (t) => `1px solid ${t.palette.divider}`,
+          backgroundColor:'#FFEBEB'
         }}
       >
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Company name
+        <Toolbar >
+          <Typography variant="h6" color="inherit" noWrap bgcolor="#FFEBEB">
+           <b>MR Tech</b> 
           </Typography>
         </Toolbar>
       </AppBar>
@@ -378,7 +379,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        MR Tech
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

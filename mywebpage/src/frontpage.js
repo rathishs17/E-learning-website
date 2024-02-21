@@ -14,7 +14,6 @@ import m4 from "./images/mentor4.jpg";
 import s1 from "./images/student1.jpg";
 import s2 from "./images/student2.jpg";
 import s3 from "./images/student3.jpg";
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -139,16 +138,31 @@ function Homepage() {
             </Card>
           </Grid>
         </Grid> */}
-          <div className="container d-flex flex-float gap-5 " style={{ marginRight:'51%',marginTop: '3%' ,width:'40%',height:'35%'}} >
+          {/* <div className="container d-flex flex-float gap-5 " style={{ marginRight:'51%',marginTop: '3%' ,width:'40%',height:'35%'}} >
       {product.map((v) => {
         return (
-          <div key={v.name} className="card" >
+          <Link to="/coursepage">
+          <div className="card">
             <img src={v.img} alt={v.name} />
             <p>{v.name}</p>
           </div>
+        </Link>
         );
       })}
-    </div>
+    </div> */}
+    <div className="container d-flex flex-float gap-5" style={{ marginRight:'71%', marginTop: '3%', width:'20%', height:'20%'}} >
+  {product.map((v) => {
+    return (
+      <Link to="/coursepage" key={v.name} style={{ textDecoration: 'none' ,marginRight:'-3%'}}>
+        <div className="card" style={{ width: '200px', height: '250px' }}>
+          <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
+          <p>{v.name}</p>
+        </div>
+      </Link>
+    );
+  })}
+</div>
+
 
       </Container>
 
@@ -258,7 +272,7 @@ function Homepage() {
             <Typography variant="body2" color="text.secondary" align="center">
               {"Copyright © "}
               <Link color="inherit" href="https://your-website.com/">
-                Your Website
+                MR Tech
               </Link>{" "}
               {new Date().getFullYear()}
               {"."}

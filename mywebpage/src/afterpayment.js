@@ -59,7 +59,7 @@ function NestedList() {
       <Collapse in={openHtml} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
 
-        <Link to={"con"}>
+        <Link to={"https://youtu.be/x9bTBcron78?si=9ISmKZdXF4TlNDyk"} style={{ textDecoration: 'none',color:'black' }}>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
@@ -67,13 +67,15 @@ function NestedList() {
             <ListItemText primary="1. HTML Introduction" />
           </ListItemButton>
           </Link>
-          
+          <Link to={"https://youtu.be/x9bTBcron78?si=9ISmKZdXF4TlNDyk"} style={{ textDecoration: 'none' ,color:'black'}}>
+
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
             </ListItemIcon>
             <ListItemText primary="2. HTML Tags" />
           </ListItemButton>
+          </Link>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
               <FiberManualRecordIcon />
@@ -166,7 +168,7 @@ function Homepage1() {
   return (
     <>
 
-      <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' ,width:'100%'}}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>MR Tech</b>
@@ -180,7 +182,7 @@ function Homepage1() {
           </Button>
             {/* </Link> */}
             <Link to="/login" style={{ textDecoration: 'none' }}>
-          <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '2%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             lOGOUT
           </Button>
           </Link> 
@@ -189,7 +191,7 @@ function Homepage1() {
       </AppBar>
 
 
-      <Grid container direction="column" marginTop="4.5%" marginLeft="11%" font fontStyle="" bgcolor="">
+      <Grid container direction="column" marginTop="4.5%" marginLeft="5%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h4" gutterBottom>
             Web Development
@@ -199,8 +201,8 @@ function Homepage1() {
       <Container maxWidth="lg" marginTop="4%">
         <NestedList />
       </Container>
-      <Grid container direction="column" marginTop="5.5%" marginLeft="11%" font fontStyle="" bgcolor="">
-        <Box sx={{ width: '200%', maxWidth: 750 }}>
+      <Grid container direction="column" marginTop="5.5%" marginLeft="5%" font fontStyle="" bgcolor="">
+        <Box sx={{ width: '100%', maxWidth: 1000 }}>
           <Typography variant="h4" gutterBottom>
             About this course
           </Typography>
@@ -220,6 +222,26 @@ function Homepage1() {
         <br/>
         <br/>
         <hr></hr>
+        <br/>
+<b>Description</b> : 
+Welcome to the HTML, JavaScript, & Bootstrap – Certification Course for Beginners
+
+        <br/>
+        <br/>
+        This course gives students the knowledge necessary to take their front-end development skills to the next level. This course, is meant for beginners who have little, to no experience with coding. We start right from the foundational concepts and work our way up to intermediate level topics. By the end of this course, students will be able to create stunning, mobile responsive web pages using the latest scripting languages.
+        <br/>
+        <br/>
+       <b> HTML Section:</b>
+        <br/>
+        <br/>
+        HTML is a key fundamental building block when learning to develop websites. Students will initially learn the basics of HTML page structure and gradually transition into working with spacing, text formatting, lists, images, videos, links, anchors, tables, forms and much more. We also include several projects, where students are shown first-hand, how to develop and code html web pages from scratch.
+        <br/>
+        <br/>
+       <b> JavaScript Section:
+       </b>
+       <br/>
+        <br/>
+        In Section two, students learn to integrate JavaScript components into their web pages for dynamic client-side functionality. We start by exploring basic concepts such as JavaScript placement and Output. From there we move into Variables, Arithmetic Operators, Objects, and Data Types. Students also explore intermediate concepts such as math functions, arrays, conditional statements, loops, events, and functions.
           </Typography>
         </Box>
       </Grid>
