@@ -55,7 +55,7 @@ function Homepage() {
   const [product, setProduct] = useState([]);
 
   async function fetchdata() {
-    const response = await axios.get('http://localhost:7002/');
+    const response = await axios.get('http://localhost:7003/');
     setProduct(response.data);
   }
 

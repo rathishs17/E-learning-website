@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 
 function ProCard({ data }) {
   const deleteProduct = (name) => {
-     axios.delete(`http://localhost:7002/deleteProduct/${name}`)
+     axios.delete(`http://localhost:7003/deleteProduct/${name}`)
      .then(()=>{console.log('deleted');})
      .catch(()=>{console.log('Could not delete it');})
   };
