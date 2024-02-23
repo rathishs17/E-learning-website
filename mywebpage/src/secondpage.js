@@ -170,27 +170,41 @@ function NestedList() {
     //     </List>
     //   </Collapse>
     // </List>
-    <div className="container d-flex flex-float gap-5" style={{ marginRight:'75%', marginTop: '3%', width:'20%', height:'20%'}} >
-    {product.map((v) => {
-      return (
-        <Link to={v.link} key={v.name} style={{ textDecoration: 'none' ,marginRight:'-3%'}}>
+  //   <div className="container d-flex flex-float gap-5" style={{ marginRight:'83%', marginTop: '3%', width:'20%', height:'20%'}} >
+  //   {product.map((v) => {
+  //     return (
+  //       <Link to={v.link} key={v.name} style={{ textDecoration: 'none' ,marginRight:'-3%'}}>
+  //         <div className="card" style={{ width: '200px', height: '250px' }}>
+  //           <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
+  //           <p>{v.name}</p>
+  //         </div>
+  //       </Link>
+  //     );
+  //   })}
+  // </div>
+  <div className="container d-flex flex-float gap-5" style={{ marginRight:'109%', marginTop: '3%', width:'20%', height:'20%' }} >
+  {product.map((v) => {
+    return (
+      <Link to={v.link} key={v.name} style={{ textDecoration: 'none' , marginRight:'-3%'}}>
+        <div className="card-container" style={{ transition: 'transform 0.3s', borderRadius: '10px' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
           <div className="card" style={{ width: '200px', height: '250px' }}>
-            <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-            <p>{v.name}</p>
+            <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
+            <p style={{color:'white'}}><b>{v.name}</b></p>
           </div>
-        </Link>
-      );
-    })}
-  </div>
+        </div>
+      </Link>
+    );
+  })}
+</div>
   );
 }
 
 function Homepage1() {
   return (
     <>
-    <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }} >
+    <AppBar position="fixed" sx={{ backgroundColor: 'black',color:'white', boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }} >
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'white' }}>
             <b>MR Tech</b>
           </Typography>
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -203,17 +217,16 @@ function Homepage1() {
             {/* </Link> */}
             <Link to="/" style={{ textDecoration: 'none' }}>
           <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            lOGOUT
+            HOME
           </Button>
           </Link> 
           {/* Add other navigation buttons as needed */}
         </Toolbar>
       </AppBar>
-    <Grid maxWidth="100%" marginLeft="0%">
+    <Grid maxWidth="81%" marginLeft="9%">
 
-      
 
-      <Grid container direction="column" marginTop="4.5%" marginLeft="4%" font fontStyle="" bgcolor="">
+      <Grid container direction="column" marginTop="4.5%" marginLeft="0%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h3" gutterBottom>
             <b>Explore our course ..!!</b>
@@ -228,7 +241,8 @@ function Homepage1() {
     color: 'white',
     p: 6,
     marginTop: '5%',
-    
+    borderRadius: '2px',
+    border:'2px solid white'
   }}
 >
   <Container maxWidth="lg">
@@ -303,7 +317,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
 
 
 
-      <Grid container direction="column" marginTop="4.5%" marginLeft="11%" font fontStyle="" bgcolor="">
+      <Grid container direction="column" marginTop="4.5%" marginLeft="0%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h4" gutterBottom>
             Our Courses
@@ -313,7 +327,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
       <Container maxWidth="lg" marginTop="4%">
         <NestedList />
       </Container>
-      <Grid container direction="column" marginTop="5.5%" marginLeft="11%" font fontStyle="" bgcolor="">
+      <Grid container direction="column" marginTop="5.5%" marginLeft="0%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h4" gutterBottom>
             Requirements
@@ -354,12 +368,15 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
         </Box>
       </Grid>
       </Grid>
+      <br/>
+      <hr/>
       <Box
         component="footer"
         sx={{
-          backgroundColor: 'pink',
+          backgroundColor: 'black',
+          color:'white',
           p: 6,
-          marginTop: '5%',
+          marginTop: '3.6%',
         }}
       >
         <Container maxWidth="lg">
@@ -367,33 +384,34 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
           <Grid container spacing={5}>
             {/* About Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
+                {/* text.primary */}
                 About Us
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 We are MR Tech company, dedicated to providing the best service to our customers.
               </Typography>
             </Grid>
 
             {/* Contact Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 Contact Us
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 123 Main Street, Anytown, USA
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 Email: mrtech@example.com
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 Phone: +1 234 567 8901
               </Typography>
             </Grid>
 
             {/* Follow Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 Follow Us
               </Typography>
               <Link href="https://www.facebook.com/" color="inherit">
@@ -410,7 +428,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
 
           {/* Copyright */}
           <Box mt={5}>
-            <Typography variant="body2" color="text.secondary" align="center">
+            <Typography variant="body2" color="" align="center">
               {"Copyright © "}
               <Link color="inherit" href="https://your-website.com/">
                 MR Tech

@@ -44,9 +44,9 @@ function AdminDashboard() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#FFEBEB' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'black',color:'white' ,boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }}>
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '' }}>
             <b>ADMIN DASHBOARD</b>
           </Typography>
           <Link to="/" style={{ textDecoration: 'none' }}>
@@ -61,7 +61,7 @@ function AdminDashboard() {
       {/* FormProductData */}
       <Form className="w-50 m-auto" marginTop="25%">
       <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Shoes Name</Form.Label>
+            <Form.Label>Course Name</Form.Label>
             <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, name:e.target.value })}} placeholder="Enter product name" />
             
           </Form.Group>
@@ -79,10 +79,19 @@ function AdminDashboard() {
             <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, link:e.target.value })}}  placeholder="url" />
           </Form.Group>
           
-          <Button variant="primary" onClick={sumbitForm} >
-            Submit
-          </Button>
+          <Box border={1} borderRadius={5} borderColor="white" p={2} display="inline-block">
+  <Button variant="primary" onClick={sumbitForm}>
+    Submit
+  </Button>
+</Box>
+
       </Form>
+
+
+      <br/>
+      <br/>
+      <br/>
+
 
       {/* CardContainer */}
       <div className="container d-flex flex-wrap gap-5 justify-content-center">
@@ -90,10 +99,13 @@ function AdminDashboard() {
           return <ProCard key={v.name} data={v} />;
         })}
       </div>
+      <br/>
+      <hr/>
       <Box
         component="footer"
         sx={{
-          backgroundColor: 'pink',
+          backgroundColor: 'black',
+          color:"white",
           p: 6,
           marginTop: '5%',
         }}
@@ -103,33 +115,33 @@ function AdminDashboard() {
           <Grid container spacing={5}>
             {/* About Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 About Us
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 We are MR Tech company, dedicated to providing the best service to our learners.
               </Typography>
             </Grid>
 
             {/* Contact Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 Contact Us
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 123 Main Street, Anytown, USA
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 Email: mrtech@example.com
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 Phone: +1 234 567 8901
               </Typography>
             </Grid>
 
             {/* Follow Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 Follow Us
               </Typography>
               <Link href="https://www.facebook.com/" color="inherit">
@@ -146,7 +158,7 @@ function AdminDashboard() {
 
           {/* Copyright */}
           <Box mt={5}>
-            <Typography variant="body2" color="text.secondary" align="center">
+            <Typography variant="body2" color="" align="center">
               {"Copyright © "}
               <Link color="inherit" href="https://your-website.com/">
                 Your Website

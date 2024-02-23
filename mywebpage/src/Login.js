@@ -179,23 +179,26 @@ const SignIn = () => {
     <>
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         {user && (
-          <div style={{ border: "3px solid #ccc", padding: "50px", borderRadius:"3%" }}>
+          <div style={{ border: "3px solid white", padding: "50px", borderRadius: "3%", color: "white" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <TextField
+              <TextField
                 type="text"
                 label="Admin Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                style={{ marginBottom: "19px" }} // Add marginBottom for spacing
+                style={{ marginBottom: "19px", color: "white", borderRadius:"5px" }} // Remove border from style
+                InputLabelProps={{ style: { color: "white" } }} // Set label color to white
+                InputProps={{ style: { color: "white", border: "1px solid white" } }} // Set input text color and border color to white
               />
               <TextField
                 type="password"
                 label="Admin Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                style={{ marginBottom: "34px" }} // Add marginBottom for spacing
+                style={{ marginBottom: "19px", color: "white", borderRadius:"5px" }} // Remove border from style
+                InputLabelProps={{ style: { color: "white" } }} // Set label color to white
+                InputProps={{ style: { color: "white", border: "1px solid white" } }} // Set input text color and border color to white
               />
-              
               <Button variant="contained" onClick={handleButtonClick}>
                 Go to Admin
               </Button>
@@ -205,6 +208,8 @@ const SignIn = () => {
       </div>
     </>
   );
+  
+  
   
   
 };

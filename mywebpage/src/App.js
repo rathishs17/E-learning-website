@@ -13,7 +13,8 @@ import FrontPage from './pics';
 
 function App() {
   const appStyle = {
-    backgroundColor: '#FFEBEB',
+    backgroundColor: 'black',
+    color:'white',
     minHeight: '100vh', 
   };
   return (

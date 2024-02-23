@@ -66,9 +66,9 @@ function Homepage() {
     <>
     <Grid maxWidth="78%">
 
-      <AppBar position="fixed"  sx={{ backgroundColor: '#FFEBEB' }}>
+      <AppBar position="fixed"  sx={{ backgroundColor: 'black',color:'white' , boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)' }}>
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '' }}>
             <b>MR Tech</b>
           </Typography>
           {/* <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -115,7 +115,7 @@ function Homepage() {
     
 
       <Container maxWidth="lg" marginTop="4%">
-        <Grid container direction="column" marginLeft="2.5%" marginTop="5%">
+        <Grid container direction="column" marginLeft="3.9%" marginTop="5%">
           <Box sx={{ width: '200%', maxWidth: 750 }}>
             <Typography variant="h3" gutterBottom marginTop="4%" marginLeft="2.5%" >
               <b>Our Courses</b>
@@ -150,18 +150,35 @@ function Homepage() {
         );
       })}
     </div> */}
-    <div className="container d-flex flex-float gap-5" style={{ marginRight:'71%', marginTop: '3%', width:'20%', height:'20%'}} >
+    {/* <div className="container d-flex flex-float gap-5" style={{ marginRight:'71%', marginTop: '3%', width:'20%', height:'20%'}} >
   {product.map((v) => {
     return (
       <Link to="/coursepage" key={v.name} style={{ textDecoration: 'none' ,marginRight:'-3%'}}>
         <div className="card" style={{ width: '200px', height: '250px' }}>
           <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-          <p>{v.name}</p>
+          <p><b>{v.name}</b></p>
+        </div>
+      </Link>
+    );
+  })}
+</div> */}
+
+<div className="container d-flex flex-float gap-5" style={{ marginRight:'75.3%', marginTop: '3%', width:'20%', height:'20%' }} >
+  {product.map((v) => {
+    return (
+      <Link to="/coursepage" key={v.name} style={{ textDecoration: 'none' , marginRight:'-3%'}}>
+        <div className="card-container" style={{ transition: 'transform 0.3s', borderRadius: '10px' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+          <div className="card" style={{ width: '200px', height: '250px' }}>
+            <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
+            <p style={{color:'white'}}><b>{v.name}</b></p>
+          </div>
         </div>
       </Link>
     );
   })}
 </div>
+
+
 
 
 {/* {product.map((v) => {
@@ -173,11 +190,11 @@ function Homepage() {
 
       </Container>
 
-      <Grid container direction="column" mt={3} marginTop="5%" marginLeft="7%" >
+      <Grid container direction="column" mt={3} marginTop="5%" marginLeft="8%" >
         <Typography variant="h3" gutterBottom marginTop="5%">
           <b>Mentors</b>
         </Typography>
-        <Grid container direction="row" marginRight="10%" marginLeft="2%" marginTop="3%">
+        <Grid container direction="row" marginRight="10%" marginLeft="-2%" marginTop="3%">
           <MentorCard name="Mark - web dev" image={m1} />
           <MentorCard name="shah - UX & UI" image={m2} />
           <MentorCard name="John - node dev" image={m3} />
@@ -186,7 +203,7 @@ function Homepage() {
         </Grid>
       </Grid>
 
-      <Grid container direction="column" marginTop="3%" marginLeft="-3.6%" bgcolor="" mt={6}>
+      <Grid container direction="column" marginTop="3%" marginLeft="-4.8%" bgcolor="" mt={6}>
       <Box sx={{ width: '100%', maxWidth: 970, textAlign: 'center' }}>
         <Typography variant="h3" gutterBottom marginTop="8%">
           <b>What our happy students say...</b>
@@ -194,7 +211,7 @@ function Homepage() {
         {/* <Typography variant="h6" paragraph marginLeft={"6%"}>
           Build skills with our courses and mentorship from world-class companies.
         </Typography> */}
-        <Grid container direction="row" marginTop="7%" marginLeft="18%">
+        <Grid container direction="row" marginTop="7%" marginLeft="15.3%">
           <EmployeeReviewCard
             name="John Doe"
             position="Software Engineer"
@@ -217,14 +234,16 @@ function Homepage() {
       </Box>
     </Grid>
     </Grid>
-
+    <br/>
+<hr/>
       <Box
         component="footer"
         sx={{
           
-          backgroundColor: 'pink',
+          backgroundColor: 'black',
+          color:'white',
           p: 6,
-          marginTop: '5%',
+          marginTop: '4%',
           width: '100%',
         }}
       >
@@ -233,33 +252,33 @@ function Homepage() {
           <Grid container spacing={5}>
             {/* About Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="white" gutterBottom>
                 About Us
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 We are MR Tech company, dedicated to providing the best service to our learners.
               </Typography>
             </Grid>
 
             {/* Contact Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 Contact Us
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 123 Main Street, Anytown, USA
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 Email: mrtech@example.com
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="">
                 Phone: +1 234 567 8901
               </Typography>
             </Grid>
 
             {/* Follow Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="text.primary" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 Follow Us
               </Typography>
               <Link href="https://www.facebook.com/" color="inherit">
@@ -276,7 +295,7 @@ function Homepage() {
 
           {/* Copyright */}
           <Box mt={5}>
-            <Typography variant="body2" color="text.secondary" align="center">
+            <Typography variant="body2" color="" align="center">
               {"Copyright © "}
               <Link color="inherit" href="https://your-website.com/">
                 MR Tech
