@@ -17,11 +17,12 @@ function AdminDashboard() {
   const [formData, setFormData] = useState({
     name: "",
     img: "",
-    cost: 0
+    cost: 0,
+    link:""
   });
 
   async function fetchdata() {
-    const response = await axios('http://localhost:7003/');
+    const response = await axios('http://localhost:7007/');
     setProduct(response.data);
   }
 
@@ -30,7 +31,7 @@ function AdminDashboard() {
   }, []);
 
   const sumbitForm = (e) => {
-    axios.post('http://localhost:7003/newProduct', formData)
+    axios.post('http://localhost:7007/newProduct', formData)
       .then((response) => {
         console.log("Product added successfully", response);
         // Optionally, you can fetch updated data after adding a new product
@@ -72,6 +73,10 @@ function AdminDashboard() {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Cost</Form.Label>
             <Form.Control type="number" onChange={(e)=>{setFormData({ ...formData, cost:e.target.value })}}  placeholder="Eg: 4500" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Course Link</Form.Label>
+            <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, link:e.target.value })}}  placeholder="url" />
           </Form.Group>
           
           <Button variant="primary" onClick={sumbitForm} >

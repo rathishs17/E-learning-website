@@ -23,6 +23,9 @@ import CardContent from '@mui/joy/CardContent';
 import { Link } from 'react-router-dom';
 import v from './images/video.mp4'
 
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 function NestedList() {
   const [openHtml, setOpenHtml] = React.useState(true);
   const [openCss, setOpenCss] = React.useState(true);
@@ -39,126 +42,146 @@ function NestedList() {
   const handleClickJs = () => {
     setOpenJs(!openJs);
   };
+  const [product, setProduct] = useState([]);
 
+  async function fetchdata() {
+    const response = await axios.get('http://localhost:7007/');
+    setProduct(response.data);
+  }
+  useEffect(() => {
+    fetchdata();
+  }, []);
   return (
 
-    <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop: '6%', marginLeft: '0%' }}
-      component="nav"
-      aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Course Content
-        </ListSubheader>
-      }
-    >
-      <ListItemButton onClick={handleClickHtml}>
-        <ListItemText primary="Module 1" />
-        {openHtml ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={openHtml} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
+    // <List
+    //   sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper', marginTop: '6%', marginLeft: '0%' }}
+    //   component="nav"
+    //   aria-labelledby="nested-list-subheader"
+    //   subheader={
+    //     <ListSubheader component="div" id="nested-list-subheader">
+    //       Course Content
+    //     </ListSubheader>
+    //   }
+    // >
+    //   <ListItemButton onClick={handleClickHtml}>
+    //     <ListItemText primary="Module 1" />
+    //     {openHtml ? <ExpandLess /> : <ExpandMore />}
+    //   </ListItemButton>
+    //   <Collapse in={openHtml} timeout="auto" unmountOnExit>
+    //     <List component="div" disablePadding>
 
-        <Link to={"https://youtu.be/x9bTBcron78?si=9ISmKZdXF4TlNDyk"}>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="1. HTML Introduction" />
-          </ListItemButton>
-          </Link>
+    //     <Link to={"https://youtu.be/x9bTBcron78?si=9ISmKZdXF4TlNDyk"}>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="1. HTML Introduction" />
+    //       </ListItemButton>
+    //       </Link>
           
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="2. HTML Tags" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="3. HTML Elements" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="4. HTML Forms" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="5. HTML5 Features" />
-          </ListItemButton>
-        </List>
-      </Collapse>
-      <ListItemButton onClick={handleClickCss}>
-        <ListItemText primary="Module 2" />
-        {openCss ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={openCss} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="1. CSS Basics" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="2. CSS Layout" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="3. CSS Flexbox" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="4. CSS Grid" />
-          </ListItemButton>
-        </List>
-      </Collapse>
-      <ListItemButton onClick={handleClickJs}>
-        <ListItemText primary="Module 3" />
-        {openJs ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={openJs} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="1. JavaScript Basics" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="2. DOM Manipulation" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="3. Events and Event Handling" />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <FiberManualRecordIcon />
-            </ListItemIcon>
-            <ListItemText primary="4. Asynchronous JavaScript" />
-          </ListItemButton>
-        </List>
-      </Collapse>
-    </List>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="2. HTML Tags" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="3. HTML Elements" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="4. HTML Forms" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="5. HTML5 Features" />
+    //       </ListItemButton>
+    //     </List>
+    //   </Collapse>
+    //   <ListItemButton onClick={handleClickCss}>
+    //     <ListItemText primary="Module 2" />
+    //     {openCss ? <ExpandLess /> : <ExpandMore />}
+    //   </ListItemButton>
+    //   <Collapse in={openCss} timeout="auto" unmountOnExit>
+    //     <List component="div" disablePadding>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="1. CSS Basics" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="2. CSS Layout" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="3. CSS Flexbox" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="4. CSS Grid" />
+    //       </ListItemButton>
+    //     </List>
+    //   </Collapse>
+    //   <ListItemButton onClick={handleClickJs}>
+    //     <ListItemText primary="Module 3" />
+    //     {openJs ? <ExpandLess /> : <ExpandMore />}
+    //   </ListItemButton>
+    //   <Collapse in={openJs} timeout="auto" unmountOnExit>
+    //     <List component="div" disablePadding>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="1. JavaScript Basics" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="2. DOM Manipulation" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="3. Events and Event Handling" />
+    //       </ListItemButton>
+    //       <ListItemButton sx={{ pl: 4 }}>
+    //         <ListItemIcon>
+    //           <FiberManualRecordIcon />
+    //         </ListItemIcon>
+    //         <ListItemText primary="4. Asynchronous JavaScript" />
+    //       </ListItemButton>
+    //     </List>
+    //   </Collapse>
+    // </List>
+    <div className="container d-flex flex-float gap-5" style={{ marginRight:'75%', marginTop: '3%', width:'20%', height:'20%'}} >
+    {product.map((v) => {
+      return (
+        <Link to={v.link} key={v.name} style={{ textDecoration: 'none' ,marginRight:'-3%'}}>
+          <div className="card" style={{ width: '200px', height: '250px' }}>
+            <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
+            <p>{v.name}</p>
+          </div>
+        </Link>
+      );
+    })}
+  </div>
   );
 }
 
@@ -186,7 +209,7 @@ function Homepage1() {
           {/* Add other navigation buttons as needed */}
         </Toolbar>
       </AppBar>
-    <Grid maxWidth="85%" marginLeft="5%">
+    <Grid maxWidth="100%" marginLeft="0%">
 
       
 
@@ -205,6 +228,7 @@ function Homepage1() {
     color: 'white',
     p: 6,
     marginTop: '5%',
+    
   }}
 >
   <Container maxWidth="lg">
@@ -267,10 +291,10 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
   <Typography>preview this course</Typography>
 </Grid>
 <Grid marginTop="16%" marginLeft="">
-  <Typography><h1><b>$499</b></h1></Typography>
+  <Typography><h1><b>$0</b></h1></Typography>
 </Grid>
-<Link to={"/payment"}>
-<Button variant='contained' color='error'>Buy now</Button>
+<Link to={""}>
+<Button variant='contained' color='error'>FREE</Button>
 </Link>
 </Grid>
 </Grid>
@@ -282,7 +306,7 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
       <Grid container direction="column" marginTop="4.5%" marginLeft="11%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h4" gutterBottom>
-            Web Development
+            Our Courses
           </Typography>
         </Box>
       </Grid>
@@ -303,16 +327,14 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
         <br/>
         • No paid software required - I'll teach you how to use PyCharm, Jupyter Notebooks and Google Colab
         <br/>
-        <br/>
-        • No paid software required - I'll teach you how to use PyCharm, Jupyter Notebooks and Google Colab
           </Typography>
           
           <Typography variant="h4" gutterBottom marginTop="6%">
             Description
           </Typography>
           <Typography marginTop="5%">
-<p>Welcome to the 100 Days of Code - The Complete Web Development Pro Bootcamp,<b>the only course you need</b>  to learn to code with Python. With over 500,000<b>5 STAR reviews</b>  and a 4.8 average, my courses are some of the HIGHEST RATED courses in the history! 
- <br/> <br/><b>100 days, 1 hour per day, learn to build 1 project per day, this is how you master Web Development.
+<p>Welcome to the 100 Days of Code <b>the only course you need</b>  to learn to code with several languages. With over 500,000<b>5 STAR reviews</b>  and a 4.8 average, my courses are some of the HIGHEST RATED courses in the history! 
+ <br/> <br/><b>100 days, 1 hour per day, learn to build 1 project per day, this is how you master any skill.
 
 </b> </p>
 

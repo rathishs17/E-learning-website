@@ -55,7 +55,7 @@ function Homepage() {
   const [product, setProduct] = useState([]);
 
   async function fetchdata() {
-    const response = await axios.get('http://localhost:7003/');
+    const response = await axios.get('http://localhost:7007/');
     setProduct(response.data);
   }
 
@@ -162,6 +162,13 @@ function Homepage() {
     );
   })}
 </div>
+
+
+{/* {product.map((v) => {
+    return (
+          <p>{v.name}</p>
+    );
+  })} */}
 
 
       </Container>

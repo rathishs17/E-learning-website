@@ -5,15 +5,16 @@ export default function FormProductData() {
         const [formData, setFormData] = useState({
                 name:"",
                 img:"",
-                cost:0
+                cost:0,
+                link:""
         })
         const sumbitForm=(e)=>{
-                axios.post('http://localhost:7003/newProduct',formData)
+                axios.post('http://localhost:7007/newProduct',formData)
         }
   return (
         <Form className="w-50 m-auto" >
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Shoes Name</Form.Label>
+            <Form.Label>Course Name</Form.Label>
             <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, name:e.target.value })}} placeholder="Enter product name" />
             
           </Form.Group>
@@ -25,6 +26,10 @@ export default function FormProductData() {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Cost</Form.Label>
             <Form.Control type="number" onChange={(e)=>{setFormData({ ...formData, cost:e.target.value })}}  placeholder="Eg: 4500" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Course Link</Form.Label>
+            <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, link:e.target.value })}}  placeholder="url" />
           </Form.Group>
           
           <Button variant="primary" onClick={sumbitForm} >
