@@ -44,9 +44,9 @@ function AdminDashboard() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: 'black',color:'white' ,boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }}>
+      <AppBar position="static" sx={{ backgroundColor: '#FFDDED',color:'black' ,boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }}>
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>ADMIN DASHBOARD</b>
           </Typography>
           <Link to="/" style={{ textDecoration: 'none' }}>
@@ -79,7 +79,7 @@ function AdminDashboard() {
             <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, link:e.target.value })}}  placeholder="url" />
           </Form.Group>
           
-          <Box border={1} borderRadius={5} borderColor="white" p={2} display="inline-block">
+          <Box border={1} borderRadius={5} borderColor="black" p={1} display="inline-block">
   <Button variant="primary" onClick={sumbitForm}>
     Submit
   </Button>
@@ -100,12 +100,11 @@ function AdminDashboard() {
         })}
       </div>
       <br/>
-      <hr/>
       <Box
         component="footer"
         sx={{
-          backgroundColor: 'black',
-          color:"white",
+          backgroundColor: '#FFDDED',
+          color:"black",
           p: 6,
           marginTop: '5%',
         }}

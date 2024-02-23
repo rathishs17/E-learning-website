@@ -66,7 +66,7 @@ function Homepage() {
     <>
     <Grid maxWidth="78%">
 
-      <AppBar position="fixed"  sx={{ backgroundColor: 'black',color:'white' , boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)' }}>
+      <AppBar position="fixed"  sx={{ backgroundColor: '#FFDDED',color:'black' , boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '' }}>
             <b>MR Tech</b>
@@ -235,13 +235,12 @@ function Homepage() {
     </Grid>
     </Grid>
     <br/>
-<hr/>
       <Box
         component="footer"
         sx={{
           
-          backgroundColor: 'black',
-          color:'white',
+          backgroundColor: '#FFDDED',
+          color:'black',
           p: 6,
           marginTop: '4%',
           width: '100%',
@@ -252,7 +251,7 @@ function Homepage() {
           <Grid container spacing={5}>
             {/* About Us */}
             <Grid item xs={12} sm={4}>
-              <Typography variant="h6" color="white" gutterBottom>
+              <Typography variant="h6" color="" gutterBottom>
                 About Us
               </Typography>
               <Typography variant="body2" color="">

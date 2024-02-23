@@ -179,25 +179,25 @@ const SignIn = () => {
     <>
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
         {user && (
-          <div style={{ border: "3px solid white", padding: "50px", borderRadius: "3%", color: "white" }}>
+          <div style={{ border: "3px solid black", padding: "50px", borderRadius: "3%", color: "black" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
               <TextField
                 type="text"
                 label="Admin Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                style={{ marginBottom: "19px", color: "white", borderRadius:"5px" }} // Remove border from style
-                InputLabelProps={{ style: { color: "white" } }} // Set label color to white
-                InputProps={{ style: { color: "white", border: "1px solid white" } }} // Set input text color and border color to white
+                style={{ marginBottom: "19px", color: "black", borderRadius:"5px" }} // Remove border from style
+                InputLabelProps={{ style: { color: "black" } }} // Set label color to black
+                InputProps={{ style: { color: "black", border: "1px solid black" } }} // Set input text color and border color to black
               />
               <TextField
                 type="password"
                 label="Admin Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                style={{ marginBottom: "19px", color: "white", borderRadius:"5px" }} // Remove border from style
-                InputLabelProps={{ style: { color: "white" } }} // Set label color to white
-                InputProps={{ style: { color: "white", border: "1px solid white" } }} // Set input text color and border color to white
+                style={{ marginBottom: "19px", color: "black", borderRadius:"5px" }} // Remove border from style
+                InputLabelProps={{ style: { color: "black" } }} // Set label color to black
+                InputProps={{ style: { color: "black", border: "1px solid black" } }} // Set input text color and border color to black
               />
               <Button variant="contained" onClick={handleButtonClick}>
                 Go to Admin

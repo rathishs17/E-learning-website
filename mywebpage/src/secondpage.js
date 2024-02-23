@@ -189,7 +189,7 @@ function NestedList() {
         <div className="card-container" style={{ transition: 'transform 0.3s', borderRadius: '10px' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
           <div className="card" style={{ width: '200px', height: '250px' }}>
             <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
-            <p style={{color:'white'}}><b>{v.name}</b></p>
+            <p style={{color:'black'}}><b>{v.name}</b></p>
           </div>
         </div>
       </Link>
@@ -202,9 +202,9 @@ function NestedList() {
 function Homepage1() {
   return (
     <>
-    <AppBar position="fixed" sx={{ backgroundColor: 'black',color:'white', boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }} >
+    <AppBar position="fixed" sx={{ backgroundColor: '#FFDDED',color:'black', boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }} >
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'white' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
             <b>MR Tech</b>
           </Typography>
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -226,7 +226,7 @@ function Homepage1() {
     <Grid maxWidth="81%" marginLeft="9%">
 
 
-      <Grid container direction="column" marginTop="4.5%" marginLeft="0%" font fontStyle="" bgcolor="">
+      <Grid container direction="column" marginTop="7.8%" marginLeft="0%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h3" gutterBottom>
             <b>Explore our course ..!!</b>
@@ -369,12 +369,11 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
       </Grid>
       </Grid>
       <br/>
-      <hr/>
       <Box
         component="footer"
         sx={{
-          backgroundColor: 'black',
-          color:'white',
+          backgroundColor: '#FFDDED',
+          color:'black',
           p: 6,
           marginTop: '3.6%',
         }}
