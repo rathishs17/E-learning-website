@@ -10,7 +10,7 @@ import ResponsiveAppBar from './admin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardContainer from "./CardContainer";
 import FrontPage from './pics';
-
+import SimplePaper1 from './feedback';
 function App() {
   const appStyle = {
     backgroundColor: 'white',
@@ -31,7 +31,7 @@ function App() {
   <Route path="/" element={<Homepage/>}/> 
 
   <Route path="/pic" element={<FrontPage/>}/> 
-
+<Route path="/feedbackform" element={<SimplePaper1/>}/>
 
   <Route path="/signuppage" element={<Signuppage/>}/> 
   {/* <Route path="/teacherprofile" element={<TeacherProfile/>}/>  */}

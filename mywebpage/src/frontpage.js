@@ -169,8 +169,8 @@ function Homepage() {
       <Link to="/coursepage" key={v.name} style={{ textDecoration: 'none' , marginRight:'-3%'}}>
         <div className="card-container" style={{ transition: 'transform 0.3s', borderRadius: '10px' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
           <div className="card" style={{ width: '200px', height: '250px' }}>
-            <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
-            <p style={{color:'white'}}><b>{v.name}</b></p>
+            <img src={v.img} alt={v.name}  style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
+            <p style={{color:'black'}}><b>{v.name}</b></p>
           </div>
         </div>
       </Link>
