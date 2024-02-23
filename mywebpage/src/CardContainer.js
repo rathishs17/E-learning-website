@@ -22,7 +22,7 @@ function AdminDashboard() {
   });
 
   async function fetchdata() {
-    const response = await axios('http://localhost:7007/');
+    const response = await axios('https://e-learning-platform-462n.onrender.com/');
     setProduct(response.data);
   }
 
@@ -31,7 +31,7 @@ function AdminDashboard() {
   }, []);
 
   const sumbitForm = (e) => {
-    axios.post('http://localhost:7007/newProduct', formData)
+    axios.post('https://e-learning-platform-462n.onrender.com/newProduct', formData)
       .then((response) => {
         console.log("Product added successfully", response);
         // Optionally, you can fetch updated data after adding a new product

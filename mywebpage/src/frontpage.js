@@ -55,7 +55,7 @@ function Homepage() {
   const [product, setProduct] = useState([]);
 
   async function fetchdata() {
-    const response = await axios.get('http://localhost:7007/');
+    const response = await axios.get('https://e-learning-platform-462n.onrender.com/');
     setProduct(response.data);
   }
 
