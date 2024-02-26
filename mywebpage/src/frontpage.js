@@ -66,28 +66,84 @@ function Homepage() {
     <>
     <Grid maxWidth="78%">
 
-      <AppBar position="fixed"  sx={{ backgroundColor: '#FFDDED',color:'black' , boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)' }}>
+      <AppBar position="fixed"  sx={{ backgroundColor: '#101629',color:'white' , boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)' }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '' }}>
             <b>MR Tech</b>
           </Typography>
-          {/* <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            Home
-          </Button>
-          <Link to={"/loginpage"}><Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              Login
-          </Button></Link> */}
           <Link to="/coursepage" style={{ textDecoration: 'none' }}>
- <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480' , marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            GET_STARTED
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-200%', display: 'flex', alignItems: 'center', justifyContent: 'center' ,'&:hover': {
+            color: 'skyblue'
+        }}}>
+            Home
+          </Button></Link>
+          <Link to="/coursepage" style={{ textDecoration: 'none' }}>
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-122%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            Courses
+          </Button></Link>
+          <Link to="/coursepage" style={{ textDecoration: 'none' }}>
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+           About
+          </Button></Link>
+          <Link to="/coursepage" style={{ textDecoration: 'none' }}>
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '#' , marginLeft: '-28%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+ Critique
           </Button></Link>
           <Link to="/login" style={{ textDecoration: 'none' }}>
- <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480' , marginLeft: '29%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            ADMIN
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '18.5%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            Admin
           </Button></Link>
-          {/* Add other navigation buttons as needed */}
         </Toolbar>
       </AppBar>
+
+
+
+
+
+      <Box sx={{ marginTop: 5.9, padding: 4, marginLeft:"10%" ,marginRight:"0%",backgroundColor:"",width:"104%"}}>
+        <Grid container spacing={3}>
+          {/* Left Column (Image) */}
+          <Grid item xs={12} md={6} textAlign="center" marginTop="0%" >
+            <img src={m2} alt="Profile" style={{ width: '70%', height: 'auto',marginTop:'30%', borderRadius: 8 , animation: 'float 3s infinite'}} />
+          </Grid>
+
+          {/* Right Column (Text) */}
+          <Grid item xs={10} md={6} >
+          <Typography variant="h2" sx={{ fontFamily: '"Poppins", sans-serif', textAlign: '' , marginTop: '15%',}}>
+              <b color='grey'>Advance your Engineering Skills with our Courses</b> {/* Replace with your actual text */}
+            </Typography>
+            <Typography sx={{ fontFamily: 'Poppins, sans-serif', textAlign: 'center', marginTop: '3%', letterSpacing: '0.5px', fontSize: '1.2rem' }}>
+            <Typography
+  variant="body1" // or "body2" depending on your design
+  sx={{
+    fontFamily: 'Poppins, sans-serif',
+    textAlign: 'justify',
+    fontSize: '1.25rem', // Adjust the font size as needed
+    lineHeight: '1.6',
+    padding: '0 10px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }}
+>
+  {/* Your text content goes here */}
+foundation in mathematics enhances my problem-solving approach. Committed to continuous learning, I merge technical proficiency with a creative mindset to deliver high-quality solutions. Outside of coding, you'll find me exploring mathematical concepts and transforming ideas into reality.
+
+
+
+
+
+</Typography>
+</Typography>
+
+
+           
+               </Grid>
+
+        </Grid>
+        
+      </Box>
+
 
 
       

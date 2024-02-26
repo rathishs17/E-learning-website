@@ -13,8 +13,8 @@ import FrontPage from './pics';
 import SimplePaper1 from './feedback';
 function App() {
   const appStyle = {
-    backgroundColor: 'white',
-    color:'black',
+    backgroundColor: '#101629',
+    color:'white',
     minHeight: '100vh', 
   };
   return (
