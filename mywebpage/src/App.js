@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardContainer from "./CardContainer";
 import FrontPage from './pics';
 import SimplePaper1 from './feedback';
+import FAQ from "./review"
+
 function App() {
   const appStyle = {
     backgroundColor: '#101629',
@@ -28,6 +30,8 @@ function App() {
 
 
   <Route path="/login" element={<Loginpage/>}/> 
+  <Route path="/el" element={<FAQ/>}/> 
+
   <Route path="/" element={<Homepage/>}/> 
 
   <Route path="/pic" element={<FrontPage/>}/> 
