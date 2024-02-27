@@ -165,7 +165,7 @@ m1,m2,m3,m4,m2,m3
  <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-72%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             Courses
           </Button></Link>
-          <Link to="/coursepage" style={{ textDecoration: 'none' }}>
+          <Link to="" style={{ textDecoration: 'none' }}>
  <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
            About
           </Button></Link>

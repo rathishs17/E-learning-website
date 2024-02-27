@@ -199,9 +199,17 @@ const SignIn = () => {
                 InputLabelProps={{ style: { color: "white" } }} // Set label color to white
                 InputProps={{ style: { color: "white", border: "1px solid white" } }} // Set input text color and border color to white
               />
-              <Button variant="contained" onClick={handleButtonClick}>
-                Go to Admin
-              </Button>
+
+              <div style={{ display: 'flex', gap: '10px' }}>
+    <Button variant="contained" onClick={handleButtonClick}>
+      Go to Admin
+    </Button>
+    <Link to="/">
+      <Button variant="contained">
+        BACK
+      </Button>
+    </Link>
+  </div>
             </div>
           </div>
         )}
