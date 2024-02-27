@@ -156,23 +156,23 @@ m1,m2,m3,m4,m2,m3
             <b>MR Tech</b>
           </Typography>
           <Link to="/coursepage" style={{ textDecoration: 'none' }}>
- <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-200%', display: 'flex', alignItems: 'center', justifyContent: 'center' ,'&:hover': {
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-152%', display: 'flex', alignItems: 'center', justifyContent: 'center' ,'&:hover': {
             color: 'skyblue'
         }}}>
             Home
           </Button></Link>
           <Link to="/coursepage" style={{ textDecoration: 'none' }}>
- <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-122%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-72%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             Courses
           </Button></Link>
           <Link to="/coursepage" style={{ textDecoration: 'none' }}>
- <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+ <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '-30%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
            About
           </Button></Link>
-          <Link to="/coursepage" style={{ textDecoration: 'none' }}>
+          {/* <Link to="/coursepage" style={{ textDecoration: 'none' }}>
  <Button color="inherit" sx={{ color: 'white', backgroundColor: '#' , marginLeft: '-28%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
  Critique
-          </Button></Link>
+          </Button></Link> */}
           <Link to="/login" style={{ textDecoration: 'none' }}>
  <Button color="inherit" sx={{ color: 'white', backgroundColor: '' , marginLeft: '18.5%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             Admin

@@ -44,17 +44,17 @@ function AdminDashboard() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#FFDDED',color:'black' ,boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }}>
+      <AppBar position="static" sx={{ backgroundColor: '#101629',color:'white' ,boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }}>
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'white' }}>
             <b>ADMIN DASHBOARD</b>
           </Typography>
           <Link to="/" style={{ textDecoration: 'none' }}>
-  <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+  <Button color="inherit" sx={{ color: 'white', backgroundColor: '', marginLeft: '10%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
     HOME
   </Button>
 </Link>
-
+{/* #E75480 */}
         </Toolbar>
       </AppBar>
 
@@ -79,7 +79,7 @@ function AdminDashboard() {
             <Form.Control type="text" onChange={(e)=>{setFormData({ ...formData, link:e.target.value })}}  placeholder="url" />
           </Form.Group>
           
-          <Box border={1} borderRadius={5} borderColor="black" p={1} display="inline-block">
+          <Box border={1} borderRadius={5} borderColor="white" p={1} display="inline-block">
   <Button variant="primary" onClick={sumbitForm}>
     Submit
   </Button>
@@ -92,7 +92,6 @@ function AdminDashboard() {
       <br/>
       <br/>
 
-
       {/* CardContainer */}
       <div className="container d-flex flex-wrap gap-5 justify-content-center">
         {product.map(v => {
@@ -100,11 +99,16 @@ function AdminDashboard() {
         })}
       </div>
       <br/>
+      <br/>
+      <br/>
+
+
+      <hr/>
       <Box
         component="footer"
         sx={{
-          backgroundColor: '#FFDDED',
-          color:"black",
+          backgroundColor: '#101629',
+          color:"white",
           p: 6,
           marginTop: '5%',
         }}

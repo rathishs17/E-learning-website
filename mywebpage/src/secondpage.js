@@ -189,7 +189,7 @@ function NestedList() {
         <div className="card-container" style={{ transition: 'transform 0.3s', borderRadius: '10px' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
           <div className="card" style={{ width: '200px', height: '250px' }}>
             <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
-            <p style={{color:'black'}}><b>{v.name}</b></p>
+            <p style={{color:'white'}}><b>{v.name}</b></p>
           </div>
         </div>
       </Link>
@@ -202,9 +202,9 @@ function NestedList() {
 function Homepage1() {
   return (
     <>
-    <AppBar position="fixed" sx={{ backgroundColor: '#FFDDED',color:'black', boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }} >
+    <AppBar position="fixed" sx={{ backgroundColor: '#101629',color:'', boxShadow: '0px 2px 4px rgba(255, 255, 255, 0.2)'  }} >
         <Toolbar>
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: 'black' }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, color: '' }}>
             <b>MR Tech</b>
           </Typography>
           <Button color="inherit" sx={{ color: 'black', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -216,7 +216,7 @@ function Homepage1() {
           </Button>
             {/* </Link> */}
             <Link to="/" style={{ textDecoration: 'none' }}>
-          <Button color="inherit" sx={{ color: 'white', backgroundColor: '#E75480', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Button color="inherit" sx={{ color: 'white', backgroundColor: '', marginLeft: '6%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             HOME
           </Button>
           </Link> 
@@ -226,7 +226,7 @@ function Homepage1() {
     <Grid maxWidth="81%" marginLeft="9%">
 
 
-      <Grid container direction="column" marginTop="7.8%" marginLeft="0%" font fontStyle="" bgcolor="">
+      <Grid container direction="column" marginTop="5.1%" marginLeft="0%" font fontStyle="" bgcolor="">
         <Box sx={{ width: '200%', maxWidth: 750 }}>
           <Typography variant="h3" gutterBottom>
             <b>Explore our course ..!!</b>
@@ -370,16 +370,17 @@ Created by <a href='rat'>Dr. Rathish Shanmugam</a>
       </Grid>
 
 
-      <Typography variant="h4" component="div" sx={{ flexGrow: 1, color: 'black', fontFamily: '"Poppins", sans-serif', display: "flex", justifyContent: "", marginTop: "4%", marginBottom: "1%" ,marginLeft:"9%"}}>
+      <Typography variant="h4" component="div" sx={{ flexGrow: 1, color: 'white', fontFamily: '"Poppins", sans-serif', display: "flex", justifyContent: "", marginTop: "4%", marginBottom: "1%" ,marginLeft:"9%"}}>
         <b>Click here 👉 <Link to="/feedbackform"><button>feedback</button></Link></b>
       </Typography>
-
+<br/>
+<hr/>
 
       <Box
         component="footer"
         sx={{
-          backgroundColor: '#FFDDED',
-          color:'black',
+          backgroundColor: '#101629',
+          color:'white',
           p: 6,
           marginTop: '3.6%',
         }}
