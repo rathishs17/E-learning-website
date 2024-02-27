@@ -11,8 +11,8 @@ import m1 from "./images/mentor1.jpg";
 import m2 from "./images/mentor2.jpg";
 import m3 from "./images/mentor3.jpg";
 import m4 from "./images/mentor4.jpg";
-import s1 from "./images/student1.jpg";
-import s2 from "./images/student2.jpg";
+import homee from "./images/hom.jpg";
+import rev from "./images/rev.jpg";
 import s3 from "./images/student3.jpg";
 import logo from "./images/logoimg.jpg";
 import { useState, useEffect } from "react";
@@ -188,7 +188,7 @@ m1,m2,m3,m4,m2,m3
         <Grid container spacing={3}>
           {/* Left Column (Image) */}
           <Grid item xs={12} md={6} textAlign="center" marginTop="0%" >
-            <img src={logo} alt="Profile" style={{ width: '70%', height: 'auto',marginTop:'18%', borderRadius: 8 , animation: 'float 3s infinite'}} />
+            <img src={homee} alt="Profile" style={{ width: '70%', height: 'auto',marginTop:'18%', borderRadius: 8 , animation: 'float 3s infinite'}} />
           </Grid>
 
           {/* Right Column (Text) */}
@@ -329,12 +329,12 @@ m1,m2,m3,m4,m2,m3
         <Grid container spacing={3}>
           {/* Left Column (Image) */}
           <Grid item xs={12} md={6} textAlign="center" marginTop="0%" >
-            <img src={logo} alt="Profile" style={{ width: '70%', height: 'auto',marginTop:'18%', borderRadius: 8 , animation: 'float 3s infinite'}} />
+            <img src={rev} alt="Profile" style={{ width: '70%', height: 'auto',marginTop:'18%', borderRadius: 8 , animation: 'float 3s infinite'}} />
           </Grid>
 
           {/* Right Column (Text) */}
           <Grid item xs={10} md={6} >
-          <Typography variant="h3" sx={{ fontFamily: '"Poppins", sans-serif', textAlign: '' , marginTop: '15%',}}>
+          <Typography variant="h2" sx={{ fontFamily: '"Poppins", sans-serif', textAlign: '' , marginTop: '15%',}}>
               <b color='grey'>What our happy students say</b> {/* Replace with your actual text */}
             </Typography>
             <Typography sx={{ fontFamily: 'Poppins, sans-serif', textAlign: 'center', marginTop: '3%', letterSpacing: '0.5px', fontSize: '1.2rem' }}>
@@ -465,11 +465,11 @@ Hear from our satisfied learners about their experience with our courses.       
 
 
 
-    <div style={{ textAlign: 'left', marginLeft: '30px', fontSize: '16px' }}>
+    <div style={{ textAlign: 'left', marginLeft: '30px', fontSize: '21px' }}>
       {faqs.map((faq, index) => (
         <div key={index} style={{ marginBottom: '15px', display: 'block' }}>
           <div
-            style={{ cursor: 'pointer', fontWeight: 'bold' }}
+            style={{ cursor: 'pointer', fontWeight: '' }}
             onClick={() => toggleFAQ(index)}
           >
 

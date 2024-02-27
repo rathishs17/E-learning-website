@@ -43,11 +43,11 @@ export default function SimplePaper1() {
 
   return (
     <>
-      <Typography variant="h4" component="div" sx={{ flexGrow: 1, color: 'black', fontFamily: '"Poppins", sans-serif', display: "flex", justifyContent: "center", marginTop: "4%", marginBottom: "1%" }}>
+      <Typography variant="h4" component="div" sx={{ flexGrow: 1, color: 'white', fontFamily: '"Poppins", sans-serif', display: "flex", justifyContent: "center", marginTop: "0%", marginBottom: "1%" }}>
         <b>Feedback Form </b>
 
       </Typography>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'black', fontFamily: '"Poppins", sans-serif', display: "flex", justifyContent: "center", marginTop: "4%", marginBottom: "1%" ,}}>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'white', fontFamily: '"Poppins", sans-serif', display: "flex", justifyContent: "center", marginTop: "4%", marginBottom: "1%" ,}}>
       We would love to hear your thoughts, suggestions, concerns or problems with anything so we can improve!
 
       </Typography>
@@ -110,7 +110,7 @@ export default function SimplePaper1() {
       </Typography></Grid>
 
         <Grid  marginTop="4%" marginLeft="2%">
-          <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+          <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>
             <HomeIcon style={{ fontSize: '1.7rem' }} />
           </Link>
         </Grid>
