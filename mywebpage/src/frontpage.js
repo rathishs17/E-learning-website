@@ -139,7 +139,7 @@ m1,m2,m3,m4,m2,m3
   const [product, setProduct] = useState([]);
 
   async function fetchdata() {
-    const response = await axios.get('https://e-learning-platform-462n.onrender.com/');
+    const response = await axios.get('https://e-learning-website-9.onrender.com/');
     setProduct(response.data);
   }
 

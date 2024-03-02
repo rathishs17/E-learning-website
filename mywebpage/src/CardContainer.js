@@ -31,7 +31,7 @@ function AdminDashboard() {
   }, []);
 
   const sumbitForm = (e) => {
-    axios.post('https://e-learning-platform-462n.onrender.com/newProduct', formData)
+    axios.post('https://e-learning-website-9.onrender.com/newProduct', formData)
       .then((response) => {
         console.log("Product added successfully", response);
         // Optionally, you can fetch updated data after adding a new product
