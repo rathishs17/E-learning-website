@@ -25,37 +25,6 @@ import Rating from '@mui/material/Rating';
 import Paper from '@mui/material/Paper';
 
 
-const MentorCard = ({ name, image }) => (
-    <Card sx={{ maxWidth: 345, margin: '2%' }}>
-      <CardMedia
-        sx={{ height: 180 }}
-        image={image}
-        title="Mentor Image"
-      />
-      <Typography variant="h5" component="div" textAlign="center" mt={2}>
-        {name}
-      </Typography>
-    </Card>
-  );
-  
-  const EmployeeReviewCard = ({ name, position, review, image }) => (
-    <Card sx={{ maxWidth: 300, margin: '1%' }}>
-      <CardMedia
-        sx={{ height: 180 }} 
-        image={image}
-        title={`${name} - ${position}`}
-      />
-      <Typography variant="h6" mt={2} textAlign="center">
-        {name}
-      </Typography>
-      <Typography variant="body2" color="textSecondary" textAlign="center">
-        {position}
-      </Typography>
-      <Typography variant="body1" textAlign="center" mt={2}>
-        {review}
-      </Typography>
-    </Card>
-  );
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     textAlign: '',
@@ -233,30 +202,6 @@ m1,m2,m3,m4,m2,m3
 
 
 
-      
-
-
-      {/* <Grid container direction ="column" alignItems="center" justify="center" marginTop="5.5%" font fontStyle="" bgcolor="" marginLeft="15%">
-
-    <Box sx={{ width: '200%', maxWidth: 750 }}>
-      
-      <Typography variant="h2" gutterBottom>
-      <b>   Advance your engineering 
-        skills with our courses</b>
-      </Typography>
-        <p>Build skills with our courses and mentor from world-class companies.</p>
-      
-    </Box>
-    </Grid> */}
-
-
-
-
-
-
-
-    
-
       <Container maxWidth="lg" marginTop="4%">
         <Grid container direction="column" marginLeft="3.9%" marginTop="5%">
           <Box sx={{ width: '200%', maxWidth: 840 }}>
@@ -267,46 +212,7 @@ m1,m2,m3,m4,m2,m3
             </Typography>
           </Box>
         </Grid>
-{/* 
-        <Grid container spacing={3} marginTop="3%" marginLeft="5%">
-          <Grid item xs={12} sm={4}>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardMedia sx={{ height: 140 }} image={webpic} title="green iguana" />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div" marginLeft="1%">
-                  HTML, CSS, JavaScript
-                </Typography>
-                <Typography variant="body2" color="text.secondary" marginLeft="1%">
-                  HTML, CSS, JavaScript are the most widely used languages in the field of web development.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid> */}
-          {/* <div className="container d-flex flex-float gap-5 " style={{ marginRight:'51%',marginTop: '3%' ,width:'40%',height:'35%'}} >
-      {product.map((v) => {
-        return (
-          <Link to="/coursepage">
-          <div className="card">
-            <img src={v.img} alt={v.name} />
-            <p>{v.name}</p>
-          </div>
-        </Link>
-        );
-      })}
-    </div> */}
-    {/* <div className="container d-flex flex-float gap-5" style={{ marginRight:'71%', marginTop: '3%', width:'20%', height:'20%'}} >
-  {product.map((v) => {
-    return (
-      <Link to="/coursepage" key={v.name} style={{ textDecoration: 'none' ,marginRight:'-3%'}}>
-        <div className="card" style={{ width: '200px', height: '250px' }}>
-          <img src={v.img} alt={v.name} style={{ maxWidth: '100%', maxHeight: '100%' }} />
-          <p><b>{v.name}</b></p>
-        </div>
-      </Link>
-    );
-  })}
-</div> */}
+
 
 <div className="container d-flex flex-float gap-5" style={{ marginRight:'75.3%', marginTop: '3%', width:'20%', height:'20%' }} >
   {product.map((v) => {
@@ -363,58 +269,9 @@ Hear from our satisfied learners about their experience with our courses.       
 </Typography>
                </Grid>
         </Grid>
-        {/* <hr/> */}
       </Box>
-      
-
-{/* {product.map((v) => {
-    return (
-          <p>{v.name}</p>
-    );
-  })} */}
-
 
       </Container>
-
-      {/* <Grid container direction="column" mt={3} marginTop="5%" marginLeft="8%" >
-        <Typography variant="h3" gutterBottom marginTop="5%">
-          <b>Mentors</b>
-        </Typography>
-        <Grid container direction="row" marginRight="10%" marginLeft="-2%" marginTop="3%">
-          <MentorCard name="Mark - web dev" image={m1} />
-          <MentorCard name="shah - UX & UI" image={m2} />
-          <MentorCard name="John - node dev" image={m3} />
-          <MentorCard name="Rio - java dev" image={m4} />
-        </Grid>
-      </Grid> */}
-
-      {/* <Grid container direction="column" marginTop="3%" marginLeft="-4.8%" bgcolor="" mt={6}>
-      <Box sx={{ width: '100%', maxWidth: 970, textAlign: 'center' }}>
-        <Typography variant="h3" gutterBottom marginTop="8%">
-          <b>What our happy students say...</b>
-        </Typography>
-        <Grid container direction="row" marginTop="7%" marginLeft="15.3%">
-          <EmployeeReviewCard
-            name="John Doe"
-            position="Software Engineer"
-            review="I learned a lot from the courses. Great mentorship!"
-            image={s1}
-          />
-          <EmployeeReviewCard
-            name="Jane Smith"
-            position="Data Scientist"
-            review="Amazing platform! The courses are top-notch."
-            image={s2}
-          />
-          <EmployeeReviewCard
-            name="Bob Johnson"
-            position="UX Designer"
-            review="The mentorship program is a game-changer."
-            image={s3}
-          />
-        </Grid>
-      </Box>
-    </Grid> */}
     </Grid>
     <br/>
 
@@ -456,13 +313,8 @@ Hear from our satisfied learners about their experience with our courses.       
 
 
     <Typography variant="h4" sx={{ fontFamily: '"Poppins", sans-serif', textAlign: 'center' , marginTop: '5%',marginBottom:'5%'}}>
-              <b color='grey'>Frequently asked questions</b> {/* Replace with your actual text */}
+              <b color='grey'>Frequently asked questions</b> 
     </Typography>
-
-
-
-
-
 
 
     <div style={{ textAlign: 'left', marginLeft: '30px', fontSize: '21px' }}>
@@ -484,11 +336,6 @@ Hear from our satisfied learners about their experience with our courses.       
         </div>
       ))}
     </div>
-
-
-
-
-
 
 <br/>
 <br/>
